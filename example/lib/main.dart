@@ -49,13 +49,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
-    FlutterwaveWebClient.initialize(
-        'FLWPUBK_TEST-4dd1b6760b5741a5f36c84b714632cda-X');
+    FlutterwaveWebClient.initialize('PUBLIC KEY GOES HERE');
     super.initState();
   }
 
   void _makePayment() async {
-    ;
     final customer =
         FlutterwaveCustomer('lazicah@gmail.com', '08102894804', 'Lazarus');
     final charge = new Charge()
@@ -67,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final response = await FlutterwaveWebClient.checkout(charge: charge);
     if (response.status) {
-      print('Successfull, Trasaction ref ${response.tx_ref}');
+      print('Successful, Transaction ref ${response.tx_ref}');
     } else {
       print('Transaction failed');
     }
