@@ -38,7 +38,7 @@ Include the Flutterwave JS script in your index.html file
  ```dart
     void _makePayment() async {
      final customer =
-         FlutterwaveCustomer('lazicah@gmail.com', '08102894804', 'Lazarus');
+         FlutterwaveCustomer('xxxxx@gmail.com', '0810xxxxxxx', 'John');
      final charge = new Charge()
        ..amount = 100
        ..reference = 'test'
